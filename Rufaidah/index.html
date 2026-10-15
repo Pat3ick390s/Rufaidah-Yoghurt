@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="RUFAIDAH YOGHURT & FURA — GZ Enterprise Wukari Branch. Fresh yoghurt, fura, and tasty flavours in different sizes for homes, offices and events."
+    />
+    <title>RUFAIDAH YOGHURT & FURA | Wukari</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#home" class="brand" aria-label="RUFAIDAH YOGHURT & FURA home">
+          <span class="brand-mark"><img src="IMG_2336.jpeg" alt="" srcset=""></span>
+<!--           <span>
+            <strong>RUFAIDAH</strong>
+            <small>YOGHURT & FURA</small>
+          </span> -->
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+          <a href="#order">Order</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="button button-primary nav-cta" href="https://wa.me/2348069463924?text=Hello%20RUFAIDAH%20YOGHURT%20%26%20FURA%2C%20I%20want%20to%20place%20an%20order." target="_blank" rel="noreferrer">
+          Order on WhatsApp
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero section">      
+        <div class="container hero-grid">                      
+            <h1 class="typewriter-wrap" aria-live="polite">
+              <span class="typewriter-text"></span>
+              <span class="typewriter-cursor" aria-hidden="true">|</span>
+            </h1>
+          <div class="hero-copy">
+
+            <span class="eyebrow">Fresh. Creamy. Delicious.</span>
+            <p class="lead">
+              Premium yoghurt and fura for every moment. Made fresh, served with care,
+              and priced for everyday enjoyment across Wukari.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#order">Order Now</a>
+              <a class="button button-secondary" href="tel:08069463924">Call Us</a>
+              <a class="button button-whatsapp" href="https://wa.me/2348069463924" target="_blank" rel="noreferrer">WhatsApp Us</a>
+            </div>
+
+            <div class="trust-row">
+              <div>
+                <strong>Fresh Daily</strong>
+                <span>Made with care</span>
+              </div>
+              <div>
+                <strong>Family Favourite</strong>
+                <span>Trusted by locals</span>
+              </div>
+              <div>
+                <strong>Fast Ordering</strong>
+                <span>On WhatsApp</span>
+              </div>
+            </div>
+          </div>
+
+  <!--         <div class="hero-visual" aria-label="Fresh yoghurt and fura display">
+            <div class="showcase-card large-card">
+              <div class="image-badge">Best Seller</div>
+              <div class="card-info">
+                <span>1 Liter Vanilla</span>
+                <strong>₦3,000</strong>
+              </div>
+            </div>
+            <div class="showcase-card small-card top-card">
+              <span>Banana</span>
+              <strong>₦1,800</strong>
+            </div>
+            <div class="showcase-card small-card bottom-card">
+              <span>2 Liter Normal</span>
+              <strong>₦5,000</strong>
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <section class="featured section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow eyebrow-green">Popular picks</span>
+            <h2>Customer favourites</h2>
+          </div>
+
+          <div class="featured-grid" id="featured-products"></div>
+        </div>
+      </section>
+
+      <section id="menu" class="section menu-section">
+        <div class="container">
+          <div class="section-heading split-heading">
+            <div>
+              <span class="eyebrow eyebrow-green">Our Menu</span>
+              <h2>Fresh flavours in every size</h2>
+            </div>
+            <div class="search-box">
+              <label class="sr-only" for="product-search">Search product</label>
+              <input id="product-search" type="search" placeholder="Search by flavor..." />
+            </div>
+          </div>
+
+          <div id="menu-groups" class="menu-groups"></div>
+        </div>
+      </section>
+
+      <section id="order" class="section order-section">
+        <div class="container order-layout">
+          <div class="order-box">
+            <div class="section-heading compact-heading">
+              <span class="eyebrow eyebrow-green">Online Ordering</span>
+              <h2>Build your order</h2>
+            </div>
+
+            <div class="selector-row">
+              <div class="field-block">
+                <label for="product-select">Product</label>
+                <select id="product-select"></select>
+              </div>
+              <div class="field-block qty-field">
+                <label for="product-qty">Qty</label>
+                <input id="product-qty" type="number" min="1" value="1" />
+              </div>
+              <button class="button button-primary add-button" id="add-to-cart">Add to cart</button>
+            </div>
+
+            <div class="cart-panel">
+              <div class="cart-header">
+                <h3>Your cart</h3>
+                <span id="cart-count">0 item(s)</span>
+              </div>
+              <div id="cart-items" class="cart-items"></div>
+            </div>
+
+            <div class="summary-card">
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <strong id="subtotal">₦0</strong>
+              </div>
+              <div class="summary-row mode-row">
+                <label for="order-mode">Order type</label>
+                <select id="order-mode">
+                  <option value="Pickup">Pickup</option>
+                  <option value="Delivery">Delivery</option>
+                </select>
+              </div>
+              <div class="summary-row grand-total">
+                <span>Total</span>
+                <strong id="total">₦0</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="customer-box">
+            <div class="section-heading compact-heading">
+              <span class="eyebrow eyebrow-green">Customer details</span>
+              <h2>Place your order</h2>
+            </div>
+
+            <form id="order-form" class="order-form">
+              <div class="field-block">
+                <label for="customer-name">Name</label>
+                <input id="customer-name" type="text" placeholder="Your full name" required />
+              </div>
+
+              <div class="field-block">
+                <label for="customer-phone">Phone number</label>
+                <input id="customer-phone" type="tel" placeholder="080xxxxxxx" required />
+              </div>
+
+              <div class="field-block">
+                <label for="delivery-info">Delivery / pickup details</label>
+                <textarea id="delivery-info" rows="4" placeholder="Enter address, pickup location, or any order notes"></textarea>
+              </div>
+
+              <button type="submit" class="button button-primary large-button">Place Order via WhatsApp</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <span class="eyebrow eyebrow-green">About Us</span>
+            <h2>Freshness, flavour and trust in every serving.</h2>
+            <p>
+              RUFAIDAH YOGHURT & FURA brings quality yoghurt and fura products in different
+              sizes and flavours to families, offices, schools and events in Wukari. We are
+              committed to freshness, quality, affordability and customer satisfaction.
+            </p>
+            <p>
+              Whether you want a daily refreshment or a satisfying treat, our products are made
+              to delight customers with creamy taste, rich flavour and dependable value.
+            </p>
+          </div>
+
+          <div class="about-highlights">
+            <div class="highlight-card">
+              <strong>Freshly made</strong>
+              <span>Prepared with consistent quality and care.</span>
+            </div>
+            <div class="highlight-card">
+              <strong>Affordable</strong>
+              <span>Great value for home and business orders.</span>
+            </div>
+            <div class="highlight-card">
+              <strong>Customer-first</strong>
+              <span>Fast support and easy ordering for every customer.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section review-section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow eyebrow-green">Testimonials</span>
+            <h2>What customers say</h2>
+          </div>
+
+          <div class="reviews-grid">
+            <article class="review-card">
+              <p>
+                “The yoghurt is rich, creamy and always fresh. The taste is excellent and the
+                prices are fair.”
+              </p>
+              <div class="reviewer">
+                <strong>Mary A.</strong>
+                <span>Wukari</span>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <p>
+                “Very reliable service and the flavours are all good. Ordering through WhatsApp is
+                quick and easy.”
+              </p>
+              <div class="reviewer">
+                <strong>Daniel T.</strong>
+                <span>Wukari</span>
+              </div>
+            </article>
+
+            <article class="review-card">
+              <p>
+                “RUFAIDAH is my go-to for family refreshment. The yoghurt tastes natural and the
+                packaging is neat.”
+              </p>
+              <div class="reviewer">
+                <strong>Grace E.</strong>
+                <span>Wukari</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container contact-grid">
+          <div class="contact-card">
+            <span class="eyebrow eyebrow-green">Contact US</span>
+            <h2>Reach RUFAIDAH today</h2>
+            <div class="contact-list">
+              <a href="tel:08069463924">08069463924</a>
+              <a href="tel:07037768881">07037768881</a>
+              <a href="tel:07061698332">07061698332</a>
+            </div>
+            <div class="contact-meta">
+              <p><strong>Branch:</strong> GZ Enterprise Wukari Branch</p>
+              <p><strong>Location:</strong> Wukari</p>
+            </div>
+            <a class="button button-whatsapp contact-whatsapp" href="https://wa.me/2348069463924" target="_blank" rel="noreferrer">
+              WhatsApp us now
+            </a>
+          </div>
+
+          <div class="contact-form-card">
+            <form id="contact-form" class="contact-form">
+              <div class="field-block">
+                <label for="contact-name">Name</label>
+                <input id="contact-name" type="text" placeholder="Your name" />
+              </div>
+
+              <div class="field-block">
+                <label for="contact-phone">Phone</label>
+                <input id="contact-phone" type="tel" placeholder="Your phone number" />
+              </div>
+
+              <div class="field-block">
+                <label for="contact-message">Message Us</label>
+                <textarea id="contact-message" rows="4" placeholder="Tell us what you need"></textarea>
+              </div>
+
+              <button type="submit" class="button button-primary large-button">Send message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 RUFAIDAH YOGHURT & FURA. GZ Enterprise Wukari Branch</p>
+        <div class="footer-links">
+          <a href="#menu">Menu</a>
+          <a href="#order">Order</a>
+          <a href="tel:08069463924">Call Us</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
